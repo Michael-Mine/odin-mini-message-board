@@ -17,6 +17,12 @@ const messages = [
 indexRouter.get("/", (req, res) =>
   res.render("index", { title: "Mini Message Board", messages: messages }),
 );
-indexRouter.get("/new", (req, res) => res.render("new"));
+indexRouter.get("/new", (req, res) =>
+  res.render("form", { title: "Add New Message" }),
+);
 
 module.exports = indexRouter;
+
+messages.forEach((message) => {
+  message.added;
+});

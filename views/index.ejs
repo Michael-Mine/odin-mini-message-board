@@ -3,9 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mini Message Board</title>
+    <title><%= title %></title>
   </head>
   <body>
-    <h1>Mini Message Board</h1>
+    <h1><%= title %></h1>
+
+    <ol>
+      <% messages.forEach((message) => { %>
+        <li>
+          <span><%= message.user %></span>
+          <span>-</span>
+          <span><%= message.added %></span>
+          <p><%= message.text %></p>
+        </li>
+      <% }); %>
+    </ol>
   </body>
 </html>

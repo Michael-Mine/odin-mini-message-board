@@ -7,7 +7,7 @@
   </head>
   <body>
     <h1><%= title %></h1>
-
+    <a href="/new">Add New Message</a>
     <ol>
       <% messages.forEach((message) => { %>
         <li>
@@ -15,7 +15,9 @@
           <span>-</span>
           <span><%= message.added %></span>
           <p><%= message.text %></p>
+          <a href="/message/<%= messages.indexOf(message) + 1 %>" target="_blank">Open</a>
         </li>
+        <br>
       <% }); %>
     </ol>
   </body>

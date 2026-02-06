@@ -30,4 +30,9 @@ router.post("/new", (req, res) => {
   res.redirect("/");
 });
 
+router.get("/message/:messageId", (req, res) => {
+  const message = messages[req.params.messageId - 1];
+  res.render("message", { title: "Message", message: message });
+});
+
 module.exports = router;

@@ -1,5 +1,5 @@
 const { Router } = require("express");
-const indexRouter = Router();
+const router = Router();
 
 const messages = [
   {
@@ -14,15 +14,20 @@ const messages = [
   },
 ];
 
-indexRouter.get("/", (req, res) =>
+router.get("/", (req, res) =>
   res.render("index", { title: "Mini Message Board", messages: messages }),
 );
-indexRouter.get("/new", (req, res) =>
+router.get("/new", (req, res) =>
   res.render("form", { title: "Add New Message" }),
 );
 
-module.exports = indexRouter;
-
-messages.forEach((message) => {
-  message.added;
+router.post("/new", (req, res) => {
+  messages.push({
+    text: req.body.message,
+    user: req.body.name,
+    added: new Date(),
+  });
+  res.redirect("/");
 });
+
+module.exports = router;

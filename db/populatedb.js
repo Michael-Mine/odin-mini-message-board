@@ -13,13 +13,13 @@ CREATE TABLE IF NOT EXISTS messages (
 
 INSERT INTO messages (name, added, text) 
 VALUES
-  ('Amando', '2026-02-06 19:42:32+00', 'Hi there!'),
+  ('Amando',  '2026-02-06 19:42:32+00', 'Hi there!'),
   ('Charles', '2026-02-06 19:42:32+00', 'Hello World!'),
   ('Mr Mine', '2026-02-06 19:51:31+00', 'Welcome to my message board!'),
-  ('add', '2026-02-06 21:18:34+00', 'ee'),
-  ('rectum', '2026-02-07 22:57:40+00', 'macaroni'),
-  ('Wa', '2026-02-11 15:25:12+00', 'What's up'),
-  ('Udbhav', '2026-02-12 16:32:50+00', 'Hello Odinites!');
+  ('add',     '2026-02-06 21:18:34+00', 'ee'),
+  ('rectum',  '2026-02-07 22:57:40+00', 'macaroni'),
+  ('Wa',      '2026-02-11 15:25:12+00', 'What''s up'),
+  ('Udbhav',  '2026-02-12 16:32:50+00', 'Hello Odinites!');
 `;
 
 async function main() {

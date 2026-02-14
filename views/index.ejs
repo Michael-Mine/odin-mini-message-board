@@ -15,7 +15,7 @@
           <span>-</span>
           <span><%= message.added %></span>
           <p><%= message.text %></p>
-          <a href="/message/<%= messages.indexOf(message) + 1 %>" target="_blank">Open</a>
+          <a href="/message/<%= message.id %>" target="_blank">Open</a>
         </li>
         <br>
       <% }); %>

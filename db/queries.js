@@ -2,7 +2,6 @@ const pool = require("./pool");
 
 async function getAllMessages() {
   const { rows } = await pool.query("SELECT * FROM messages");
-  console.log(rows);
   return rows;
 }
 
@@ -10,7 +9,6 @@ async function getMessage(messageId) {
   const { rows } = await pool.query("SELECT * FROM messages WHERE id = ($1)", [
     messageId,
   ]);
-  console.log(rows);
   return rows;
 }
 
@@ -27,9 +25,3 @@ module.exports = {
   getMessage,
   insertMessage,
 };
-
-insertMessage({
-  name: "test",
-  added: "2026-02-12 16:32:50+00",
-  text: "insert test",
-});
